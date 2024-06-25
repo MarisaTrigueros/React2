@@ -7,7 +7,7 @@ function App() {
 
   return (
     <>
-        <MouseClicker />
+        <MouseClicker name='One'/>
     </>
   )
 }

@@ -1,17 +1,20 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-// ¿Por qué no me coge {name = 'One'} como prop? Sólo si lo especifico en button
-function MouseClicker({name = 'One'}) {
-
-    const [counter, setCounter] = useState(0);
+//! ¿Por qué no me coge {name = 'One'} como prop? Sólo si lo especifico en button name={name}
+function MouseClicker({ name = 'One' }) {
+    
+    const  imageUrl = 'https://s1.significados.com/foto/ave-fenix-og.jpg?class=ogImageSquare';
 
     const handleClick = (event) => {
-        console.log(event.target.name);
-        setCounter(counter + 1)
+        //! Si dejamos 'event.target.name' sólo veremos por consola imageUrl
+        console.log(event.currentTarget.getAttribute('name'));
+        console.log(imageUrl);
     }
   return (
     <>
-    <button onClick={handleClick} name={name}>{counter} </button>
+    <button onClick={handleClick} name={name}>
+        <img src={imageUrl} alt='Fénix' className='fenix'/>
+    </button>
     </>
   )
 }
