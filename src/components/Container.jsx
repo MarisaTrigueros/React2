@@ -30,7 +30,7 @@ function Container({ title, children }) {
             {title}
         </div>
         {!collapsed && <div>{children}</div>}
-        //! Renderizado condicional de children: Se utiliza el operador lógico && para renderizar los children solo si collapsed es false. Si collapsed es true, los children no se renderizan, es decir, se ocultan.
+        {/* Renderizado condicional de children: Se utiliza el operador lógico && para renderizar los children solo si collapsed es false. Si collapsed es true, los children no se renderizan, es decir, se ocultan. */}
       </div>
     </>
   );
