@@ -1,0 +1,8 @@
+.welcome{
+    background-color: greenyellow;
+    border: 5px green dotted;
+    border-radius: 10px;
+    padding: 100px;
+    font-size: xx-large;
+    font-weight: bold;
+}
