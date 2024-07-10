@@ -40,3 +40,21 @@
 .read-the-docs {
   color: #888;
 }
+
+.searchPack{
+display: flex;
+flex-direction: row;
+}
+
+.submit{
+  background-color: rgba(134, 170, 243, 0.5);
+  width: 10px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
