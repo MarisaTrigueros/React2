@@ -5,6 +5,7 @@ function GithubUser({ username }) {
 
   const { user, isLoading, isError } = useGithubUser(username);
 
+  if (!username) return (<div>Please enter a username</div>);
   if (isError) return (<div>Failed to load</div>);
   if (isLoading) return (<div>Loading...</div>);
 
