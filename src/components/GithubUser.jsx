@@ -3,9 +3,8 @@ import useGithubUser from "./useGithubUser";
 
 function GithubUser({ username }) {
 
-  const { user, isLoading, isError } = useGithubUser(username);
+  const { user, isLoading, isError, refetch } = useGithubUser(username);
 
-  if (!username) return (<div>Please enter a username</div>);
   if (isError) return (<div>Failed to load</div>);
   if (isLoading) return (<div>Loading...</div>);
 
@@ -15,6 +14,8 @@ function GithubUser({ username }) {
         <h2>{user.name}</h2>
         <p>Login: {user.login}</p>
         <img src={user.avatar_url} style={{width: 100, borderRadius: '50%' }} alt='User Avatar' />
+        <br></br>
+        <button onClick={refetch}>Recuperar datos</button>
       </div>
       </>
     );

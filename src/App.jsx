@@ -6,7 +6,7 @@ import GithubUser from "./components/GithubUser";
 import GithubUsers from './components/GithubUsers';
 
 function App() {
-  const { count, increment, decrement, reset } = useCounter({ initialValue: 0 });
+  const { count, increment, decrement, reset } = useCounter(0);
 
  
   return (
