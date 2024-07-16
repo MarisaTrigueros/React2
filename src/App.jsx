@@ -1,3 +1,4 @@
+import React from 'react';
 import "./App.css";
 import Login from "./components/Login";
 import useCounter from "./components/useCounter";
@@ -5,7 +6,7 @@ import GithubUser from "./components/GithubUser";
 import GithubUsers from './components/GithubUsers';
 
 function App() {
-  const { count, increment, decrement, reset } = useCounter(0);
+  const { count, increment, decrement, reset } = useCounter({ initialValue: 0 });
 
  
   return (
@@ -17,7 +18,7 @@ function App() {
         <button onClick={reset}>Reset</button>
       </div>
       <Login/>
-      <GithubUser />
+      <GithubUser username="MarisaTrigueros" />
       <GithubUsers />
       
 

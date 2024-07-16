@@ -24,6 +24,7 @@ function GithubUsers() {
         <input
           type="text"
           onChange={handleInputChange}
+          value={username}
           id="textInput"
           placeholder="Enter a username"
         />
@@ -31,6 +32,7 @@ function GithubUsers() {
           &#128269;
         </button>
       </form>
+
       <ul>
         {userList.map((user, index) => (
           <li key={index}>

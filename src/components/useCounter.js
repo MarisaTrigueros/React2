@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 function useCounter({ initialValue = 0 }) {
   const [count, setCount] = useState(Math.max(initialValue, 0));
